@@ -44,11 +44,12 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-          - ./gradlew check
-          - ./gradlew frontendSync --stacktrace
-          - ./gradlew shadowJar
+         
 
       # run tests!
       - run: gradle test
+      - ./gradlew check
+      - ./gradlew frontendSync -- stacktrace
+      - ./gradlew shadowJar
   
       
