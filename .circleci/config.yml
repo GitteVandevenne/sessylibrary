@@ -29,9 +29,9 @@ jobs:
       - npm install
     steps:
       - checkout
-      - ./gradlew check
-      - ./gradlew frontendSync -- stacktrace
-      - ./gradlew shadowJar
+      - gradlew check
+      - gradlew frontendSync -- stacktrace
+      - gradlew shadowJar
       
 
       # Download and cache dependencies
